@@ -26,7 +26,6 @@ import { Page404 } from './Page404'
 import { PageAside } from './PageAside'
 import { PageHead } from './PageHead'
 import styles from './styles.module.css'
-import Script from 'next/script'
 
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
@@ -251,22 +250,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
         description={socialDescription}
         image={socialImage}
         url={canonicalPageUrl}
-      />
-
-<Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-BSWXHVC6QR"/>
-      <Script
-          id='google-analytics'
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-BSWXHVC6QR', {
-              page_path: window.location.pathname,
-              });
-              `,
-          }}
       />
 
       {isLiteMode && <BodyClassName className='notion-lite' />}
