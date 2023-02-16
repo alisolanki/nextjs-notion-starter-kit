@@ -27,6 +27,7 @@ import {
   posthogConfig,
   posthogId
 } from '@/lib/config'
+import Script from 'next/script'
 
 if (!isServer) {
   bootstrap()
@@ -61,5 +62,23 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, [router.events])
 
-  return <Component {...pageProps} />
+  return <>
+
+<Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-BSWXHVC6QR"/>
+      <Script
+          id='google-analytics'
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-BSWXHVC6QR', {
+              page_path: window.location.pathname,
+              });
+              `,
+          }}
+      />
+  <Component {...pageProps} />
+  </>
 }
