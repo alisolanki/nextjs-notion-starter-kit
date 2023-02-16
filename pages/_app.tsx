@@ -64,7 +64,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return <>
 
-<Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-BSWXHVC6QR"/>
+<Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-YPE8YSVLCZ"/>
       <Script
           id='google-analytics'
           strategy="afterInteractive"
@@ -73,7 +73,7 @@ export default function App({ Component, pageProps }: AppProps) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-BSWXHVC6QR', {
+              gtag('config', 'G-YPE8YSVLCZ', {
               page_path: window.location.pathname,
               });
               `,
