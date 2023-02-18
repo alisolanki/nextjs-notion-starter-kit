@@ -11,7 +11,7 @@ export default siteConfig({
   // basic site info (required)
   name: 'Ali Solanki Portfolio Website',
   domain: 'alisolanki.com',
-  author: 'Ali Solanki and Travis Fischer',
+  author: 'Ali Solanki',
 
   // open graph metadata (optional)
   description: 'Ali Solanki Portfolio Website',
@@ -44,7 +44,8 @@ export default siteConfig({
   //
   pageUrlOverrides: {
     '/contact-me': '25b80d4bf14044f2a723699f2de3268f',
-    '/projects-and-builds': '6195934f09cf4d5298eee674e0a17646'
+    '/projects': '6195934f09cf4d5298eee674e0a17646',
+    '/sponsorship': 'b5b2c1b5b2c1b5b2c1b5b2c1b5b2c1b5',
   },
   // pageUrlOverrides: null,
 
@@ -60,6 +61,10 @@ export default siteConfig({
     {
       title: 'Contact Me',
       pageId: '25b80d4bf14044f2a723699f2de3268f'
+    },
+    {
+      title: 'Sponsorship',
+      pageId: 'c02fcfe93ee44648b14a714456d8d147'
     }
   ]
 })
