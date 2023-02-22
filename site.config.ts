@@ -44,8 +44,7 @@ export default siteConfig({
   //
   pageUrlOverrides: {
     '/projects': '6195934f09cf4d5298eee674e0a17646',
-    '/sponsorship': 'c02fcfe93ee44648b14a714456d8d147',
-    '/contact-me': '25b80d4bf14044f2a723699f2de3268f',
+    '/sponsor': 'c02fcfe93ee44648b14a714456d8d147',
     '/blogs': 'c4410427ab294d3d9ad91d8fed7377cd',
   },
   // pageUrlOverrides: null,
@@ -60,16 +59,12 @@ export default siteConfig({
       pageId: '6195934f09cf4d5298eee674e0a17646'
     },
     {
-      title: 'Sponsorship',
+      title: 'Sponsor',
       pageId: 'c02fcfe93ee44648b14a714456d8d147'
     },
     {
       title: 'Blogs',
       pageId: 'c4410427ab294d3d9ad91d8fed7377cd'
-    },
-    {
-      title: 'Contact Me',
-      pageId: '25b80d4bf14044f2a723699f2de3268f'
     }
   ]
 })
