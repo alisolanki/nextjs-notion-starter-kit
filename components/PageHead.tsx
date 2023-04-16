@@ -4,7 +4,6 @@ import Head from 'next/head'
 import * as config from '@/lib/config'
 import * as types from '@/lib/types'
 import { getSocialImageUrl } from '@/lib/get-social-image-url'
-import Script from 'next/script'
 
 export const PageHead: React.FC<
   types.PageProps & {
