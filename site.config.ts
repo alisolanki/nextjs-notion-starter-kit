@@ -46,6 +46,8 @@ export default siteConfig({
     '/projects': '6195934f09cf4d5298eee674e0a17646',
     '/sponsor': 'c02fcfe93ee44648b14a714456d8d147',
     '/blogs': 'c4410427ab294d3d9ad91d8fed7377cd',
+    '/press-kit': '1084450bd43944488d5d3ef95e17552c',
+    '/my-story':'a162169b6ee641e9b06c2c2c379a0d62'
   },
   // pageUrlOverrides: null,
 
