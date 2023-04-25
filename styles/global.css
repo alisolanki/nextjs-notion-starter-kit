@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
-  --bg-color: #101010 !important;
+}
+
+.dark-mode {
+  --bg-color: black; /* dark mode background color */
 }
 
 a {
