@@ -78,6 +78,7 @@ export const PageHead: React.FC<
 
       <meta property='og:title' content={title} />
       <meta name='twitter:title' content={title} />
+      <meta name='impact-site-verification' value='90ce8aad-9e7c-4268-ac0b-335052c22e98'>
       <title>{title}</title>
     </Head>
   )
