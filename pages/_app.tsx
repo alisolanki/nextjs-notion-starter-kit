@@ -18,7 +18,7 @@ import * as Fathom from 'fathom-client'
 import { useRouter } from 'next/router'
 import { posthog } from 'posthog-js'
 import * as React from 'react'
-import * as fbq from '../lib/fpixel.js'
+import { FB_PIXEL_ID, pageview } from '@/lib/fpixel'
 
 import { bootstrap } from '@/lib/bootstrap-client'
 import {
@@ -38,11 +38,10 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
 
   React.useEffect(() => {
-    // This pageview only triggers the first time (it's important for Pixel to have real information)
-    fbq.pageview()
+    pageview()
 
     const handleRouteChange = () => {
-      fbq.pageview()
+      pageview()
     }
 
     router.events.on('routeChangeComplete', handleRouteChange)
@@ -50,6 +49,7 @@ export default function App({ Component, pageProps }: AppProps) {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
   }, [router.events])
+
 
   React.useEffect(() => {
     function onRouteChangeComplete() {
@@ -79,7 +79,8 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return <>
     {/* Global Site Code Pixel - Facebook Pixel */}
-  <Script
+    {FB_PIXEL_ID && (
+      <Script
         id="fb-pixel"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -90,12 +91,15 @@ export default function App({ Component, pageProps }: AppProps) {
             if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
             n.queue=[];t=b.createElement(e);t.async=!0;
             t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            s.parentNode.insertBefore(t,s)}
+            (window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', ${fbq.FB_PIXEL_ID});
+            fbq('init', '${FB_PIXEL_ID}');
+            fbq('track', 'PageView');
           `,
         }}
       />
+    )}
 
     <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-YPE8YSVLCZ"/>
       <Script

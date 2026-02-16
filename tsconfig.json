@@ -9,6 +9,6 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "*.config.ts",
-    "lib/fpixel.js"],
+    "lib/fpixel.ts"],
   "exclude": ["node_modules"]
 }
