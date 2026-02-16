@@ -3,6 +3,7 @@ import Head from 'next/head'
 import type * as types from '@/lib/types'
 import * as config from '@/lib/config'
 import { getSocialImageUrl } from '@/lib/get-social-image-url'
+import Script from 'next/script'
 
 export function PageHead({
   site,

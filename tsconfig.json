@@ -8,6 +8,7 @@
       "@/styles/*": ["styles/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "*.config.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "*.config.ts",
+    "lib/fpixel.js"],
   "exclude": ["node_modules"]
 }
