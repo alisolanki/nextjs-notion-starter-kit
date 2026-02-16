@@ -2,27 +2,27 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: '7875426197cf461698809def95960ebf',
+  rootNotionPageId: '2a0bbc47e22444788d0777851e5938f9',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'Next.js Notion Starter Kit',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
-  author: 'Travis Fischer',
+  name: 'Ali Solanki Portfolio Website',
+  domain: 'alisolanki.com',
+  author: 'Ali Solanki',
 
   // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
+  description: 'Ali Solanki Portfolio Website',
 
   // social usernames (optional)
-  twitter: 'transitive_bs',
-  github: 'transitive-bullshit',
-  linkedin: 'fisch2',
+  twitter: 'alisolanki',
+  github: 'alisolanki',
+  linkedin: 'alisolanki',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
-  // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
+  youtube: 'AliSolanki', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults
@@ -42,11 +42,15 @@ export default siteConfig({
   // any pages defined here will override their default URL paths
   // example:
   //
-  // pageUrlOverrides: {
-  //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
-  //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
-  // }
-  pageUrlOverrides: null,
+  pageUrlOverrides: {
+    '/blogs': 'c4410427ab294d3d9ad91d8fed7377cd',
+    '/projects': '6195934f09cf4d5298eee674e0a17646',
+    '/sponsor': 'c02fcfe93ee44648b14a714456d8d147',
+    '/press-kit': '1084450bd43944488d5d3ef95e17552c',
+    '/contact-me': '25b80d4bf14044f2a723699f2de3268f',
+    '/my-story': 'a162169b6ee641e9b06c2c2c379a0d62'
+  },
+  // pageUrlOverrides: null,
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
