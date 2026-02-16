@@ -13,11 +13,11 @@ html {
   margin: 0;
 }
 
-body .light-mode {
+body.light-mode {
   --bg-color: #ffffff !important;
 }
 
-body .dark-mode {
+body.dark-mode {
   --bg-color: #101010 !important;
 }
 
