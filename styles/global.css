@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  --bg-color: #101010 !important;
 }
 
 a {
@@ -19,14 +20,6 @@ body {
     'Droid Sans', 'Helvetica Neue', 'Noto Sans', sans-serif;
   font-family: var(--notion-font);
   overflow-x: hidden;
-}
-
-body .light-mode {
-  --bg-color: #fff !important;
-}
-
-body .dark-mode {
-  --bg-color: #101010 !important;
 }
 
 .static-tweet blockquote {
